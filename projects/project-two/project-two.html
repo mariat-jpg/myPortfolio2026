@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Two | Portfolio</title>
+    <link rel="stylesheet" href="proj2_style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+    <img src="../../assets/deco/fl8.png" alt="" class="deco-f8 deco-fl8--body" data-initial-rotate="-12"/>
+    <img src="../../assets/deco/fl9.png" alt="" class="deco-f9 deco-fl9--body" data-initial-rotate="12" />
+    <img src="../../assets/deco/fl2.png" alt="" class="deco-f2 deco-f2--proj" data-initial-rotate="20"/>
+
+    <nav class="navbar">
+        <span class="nav-logo">maria.</span>
+
+        <button class="nav-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-links">
+        <li><a href="../../index.html#home">Home</a></li>
+        <li><a href="../../index.html#about">About Me</a></li>
+        <li><a href="../../index.html#projects">Projects</a></li>
+        <li><a href="../../index.html#skills">Skills</a></li>
+        <li><a href="../../index.html#contact">Contact Me</a></li>
+        <li class="nav-divider" role="presentation"></li>
+        <li><a href="https://github.com/mariat-jpg" target="_blank" aria-label="GitHub"><i class="devicon-github-plain"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/maria-e-thomas/" target="_blank" aria-label="LinkedIn"><i class="devicon-linkedin-plain"></i></a></li>
+        </ul>
+    </nav>
+
+    <section class="project-detail">
+
+        <h1 class="project-title">Nonlinear Dynamics in Neural Networks</h1>
+
+        <p>Built a full computational pipeline to analyze resting-state fMRI data as a dynamic functional network, 
+                characterizing time-varying connectivity, graph-theoretic properties, and neural flexibility differences between 
+                healthy controls and Parkinson's disease patients.</p></br>
+        <p>This project was a group work, undertaken as our third year mini-project, under the guidance of Dr. Sminu Izudheen.</p>
+        </br>
+
+        <div class="project-body">
+            <div class="project-outputs">
+            <img src="1.png" alt="Output 1" class="output-img" />
+            <img src="2.png" alt="Output 2" class="output-img" />
+            <img src="3.png" alt="Output 3" class="output-img" />
+            <img src="4.png" alt="Output 4" class="output-img" />
+            <img src="5.png" alt="Output 5" class="output-img" />
+            <img src="6.png" alt="Output 6" class="output-img" />
+            </div>
+        </div>
+
+        <div class="project-content">
+
+            <div class="content-block">
+                <h2>Research Question</h2>
+                <p>Traditional fMRI connectivity analyses treat brain connectivity as static, i.e, a single average over the entire scan. 
+                    But brain networks are inherently dynamic. This project asks: how do the temporal dynamics of large-scale functional 
+                    brain networks differ between healthy individuals and those with Parkinson's disease, and what do nonlinear measures 
+                    like recurrence plots reveal that static analyses miss?</p>
+            </div>
+
+            <div class="content-block">
+                <h2>Dataset and Preprocessing</h2>
+                <p>Resting-state fMRI data from 20 healthy controls and 20 Parkinson's patients (Tao Wu dataset) were processed using Nilearn. 
+                    BOLD timeseries were extracted from 24 Parkinson's-disease-relevant ROIs defined by the AAL atlas, spanning the hippocampus, 
+                    amygdala, basal ganglia (caudate, putamen, pallidum), thalamus, motor cortex (precentral, postcentral, SMA), anterior cingulate, 
+                    and middle frontal gyrus, regions known to be implicated in PD pathophysiology.</p>
+            </div>
+
+            <div class="content-block">
+                <h2>Methodology</h2>
+                <p>The pipeline comprised two analysis streams:</p><br/>
+                <ol>
+                    <li><strong>Static Analysis:</strong> Pearson correlation-based functional connectivity matrices were computed and averaged across subjects. Graph-theoretic measures (clustering coefficient, path length, global efficiency, and modularity) were extracted and compared between groups.</li></br>
+                    <li><strong>Dynamic Analysis:</strong> A sliding window approach (window = 20 TRs, step = 1) was applied to each subject's BOLD timeseries to generate a sequence of connectivity matrices over time. Spectral clustering was applied at each window to identify functional communities, and ROI community switches (a measure of neural flexibility) were tracked across windows. Recurrence plots were constructed from the windowed connectivity matrices to characterize the nonlinear dynamics and temporal self-similarity of each group's connectivity state trajectory.</li>
+                </ol>
+            </div>
+
+            <div class="content-block">
+                <h2>Key Findings</h2>
+                <p>
+                    <ul>
+                        <li><strong>Elevated neural flexibility in PD:</strong> Parkinson's patients showed consistently higher ROI community switch counts across all 24 regions (average ~109 switches) compared to healthy controls (~105 switches), indicating greater instability in functional community assignments which is consistent with disrupted network segregation in PD.</li>
+                        <li><strong>Reduced clustering and global efficiency in PD:</strong> Healthy brains maintained slightly higher clustering (0.507 vs. 0.494) and global efficiency (0.857 vs. 0.851) on average, suggesting more efficient local and global information integration in the healthy group.</li>
+                        <li><strong>Higher modularity in PD:</strong> Contrary to naive expectations, PD brains showed slightly higher modularity (0.129 vs. 0.122), potentially reflecting pathological over-segregation of certain subnetworks which is a pattern observed in PD literature related to disrupted basal ganglia–cortical integration.</li>
+                        <li><strong>Recurrence plot divergence:</strong> The healthy recurrence plot shows more structured, diagonal-dominant patterns, indicating greater temporal regularity of connectivity states. The PD plot is noticeably more fragmented, revealing less predictable, more chaotic state transitions, indicating that a nonlinear signature is not detectable by static connectivity alone.</li>
+                        <li><strong>Node strength reduction in limbic and motor ROIs:</strong> Hippocampus, thalamus, putamen, postcentral, and anterior cingulate showed reduced node strength in PD, consistent with known patterns of hypoconnectivity in these regions.</li>
+                    </ul>
+                </p>
+            </div>
+
+            <div class="content-block">
+                <h2>Implementation Approach</h2>
+                <p>
+                    <ul>
+                        <li>Designed and implemented a modular Python pipeline with separate components for data loading, atlas-based ROI extraction, static and dynamic connectivity computation, graph measure analysis, recurrence quantification, animated network visualization, and automated PDF report generation.</li>
+                        <li>Applied spectral clustering to time-varying connectivity matrices to track functional community dynamics — going beyond standard k-means approaches typically used in sliding-window studies.</li>
+                        <li>Integrated nonlinear dynamics analysis (recurrence plots) with graph-theoretic measures in a unified framework, enabling multi-level characterization of brain network dynamics.</li>
+                    </ul>
+                </p>
+            </div>
+
+            <div class="content-block">
+                <h2>Tech stack</h2>
+                <div class="tech-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Nilearn</span>
+                    <span class="tag">NumPy</span>
+                    <span class="tag">NetworkX</span>
+                    <span class="tag">SciPy</span>
+                    <span class="tag">Matplotlib</span>
+                    <span class="tag">AAL Atlas</span>
+                    <span class="tag">Tao Wu resting-state fMRI dataset</span>
+                </div>
+            </div>
+
+            <div class="content-block">
+            <h2>Links</h2>
+            <a href="https://github.com/mariat-jpg/nonlinearDynamics" class="project-link" target="_blank">View on GitHub →</a>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        const decoImages = document.querySelectorAll('.deco-f2, .deco-f8, .deco-f9');
+
+        window.addEventListener('scroll', () => {
+        requestAnimationFrame(() => {
+                    const scrolled = window.scrollY;
+                    decoImages.forEach((img, index) => {
+                        const direction = index % 2 === 0 ? 1 : -1;
+                        const initialRotate = parseFloat(img.dataset.initialRotate) || 0;
+                        const rotation = initialRotate + (scrolled * 0.04 * direction);
+                        img.style.transform = `rotate(${rotation}deg)`;
+                    });
+            });
+        });
+
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        navToggle.addEventListener('click', () => {
+        navToggle.classList.toggle('open');
+        navLinks.classList.toggle('open');
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navToggle.classList.remove('open');
+            navLinks.classList.remove('open');
+        });
+        });
+
+    </script>
+
+</body>
+</html>

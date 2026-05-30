@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Four | Portfolio</title>
+    <link rel="stylesheet" href="proj4_style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+    <img src="..\..\assets/deco/fl8.png" alt="" class="deco-f8 deco-fl8--body" data-initial-rotate="-12"/>
+    <img src="..\..\assets/deco/fl9.png" alt="" class="deco-f9 deco-fl9--body" data-initial-rotate="12"/>
+    <img src="..\..\assets/deco/fl2.png" alt="" class="deco-f2 deco-f2--proj" data-initial-rotate="20"/>
+
+    <nav class="navbar">
+        <span class="nav-logo">maria.</span>
+
+        <button class="nav-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-links">
+        <li><a href="../../index.html#home">Home</a></li>
+        <li><a href="../../index.html#about">About Me</a></li>
+        <li><a href="../../index.html#projects">Projects</a></li>
+        <li><a href="../../index.html#skills">Skills</a></li>
+        <li><a href="../../index.html#contact">Contact Me</a></li>
+        <li class="nav-divider" role="presentation"></li>
+        <li><a href="https://github.com/mariat-jpg" target="_blank" aria-label="GitHub"><i class="devicon-github-plain"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/maria-e-thomas/" target="_blank" aria-label="LinkedIn"><i class="devicon-linkedin-plain"></i></a></li>
+        </ul>
+    </nav>
+
+    <section class="project-detail">
+
+        <h1 class="project-title">Employee Management System - ASP.NET MVC Web Application</h1>
+
+        <div class="project-body">
+
+            <div class="project-description">
+                <p>Developed a full-stack employee management web application built on ASP.NET MVC with role-based authentication, 
+                    complete CRUD functionality, and SQL Server database integration via stored procedures.</p>
+                <br/>
+                <p>This project was developed by me during my internship at MariApps Marine Solutions Pvt. Ltd., Kochi, India.</p>
+            </div>
+
+            <div class="project-outputs">
+            <img src="1.jpg" alt="Output 1" class="output-img" />
+            <img src="2.jpg" alt="Output 2" class="output-img" />
+            </div>
+
+        </div>
+
+        <div class="project-content">
+
+            <div class="content-block">
+                <h2>Overview</h2>
+                <p>Developed during an internship, this application provides a structured platform for managing employee records. 
+                    The system supports two distinct user roles — admin and standard user — each with different levels of access and 
+                    functionality, built on top of a custom authentication and registration system.</p>
+            </div>
+
+            <div class="content-block">
+                <h2>Key Features</h2>
+                <p>
+                    <ul>
+                        <li>Full CRUD operations for employee records, backed by SQL Server stored procedures</li>
+                        <li>Role-based access control routing admin and standard users to appropriately scoped views</li>
+                        <li>Custom user authentication and registration with form validation and CSRF protection</li>
+                        <li>Dedicated Data Access Layer separating database logic from application logic</li>
+                        <li>Responsive UI built with Bootstrap and Razor Views</li>
+                    </ul>
+                </p>
+            </div>
+
+            <div class="content-block">
+                <h2>Implementation Approach</h2>
+                <p>
+                    Designed and implemented a user-friendly interface using ASP.NET Core MVC, with a focus on seamless CRUD operations across a 
+                    clean, role-aware view structure. The EmpController handles all employee record operations, i.e, creating, reading, updating, 
+                    and deleting, with each action mapped to a corresponding SQL Server stored procedure, keeping business logic cleanly 
+                    separated from the database layer. Database connectivity was established using ADO.NET through a dedicated Data Access 
+                    Layer (Emp_DAL, Login_DAL), centralizing all data handling and query execution. The LoginController manages user 
+                    authentication and registration with CSRF protection via anti-forgery tokens, and implements role verification to route 
+                    admin and standard users to appropriately scoped views.
+                </p>
+            </div>
+
+            <div class="content-block">
+                <h2>Tech stack</h2>
+                <div class="tech-tags">
+                    <span class="tag">C#</span>
+                    <span class="tag">ASP.NET Core MVC</span>
+                    <span class="tag">SQL Server</span>
+                    <span class="tag">SQL Server Management Studio</span>
+                    <span class="tag">ADO.NET</span>
+                    <span class="tag">Razor Views</span>
+                    <span class="tag">HTML/CSS</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Bootstrap</span>
+                </div>
+            </div>
+
+            <div class="content-block">
+            <h2>Links</h2>
+            <a href="https://github.com/mariat-jpg/EmployeeManagementSystem" class="project-link" target="_blank">View on GitHub →</a>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        const decoImages = document.querySelectorAll('.deco-f2, .deco-f8, .deco-f9');
+
+        window.addEventListener('scroll', () => {
+        requestAnimationFrame(() => {
+                    const scrolled = window.scrollY;
+                    decoImages.forEach((img, index) => {
+                        const direction = index % 2 === 0 ? 1 : -1;
+                        const initialRotate = parseFloat(img.dataset.initialRotate) || 0;
+                        const rotation = initialRotate + (scrolled * 0.04 * direction);
+                        img.style.transform = `rotate(${rotation}deg)`;
+                    });
+            });
+        });
+
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        navToggle.addEventListener('click', () => {
+        navToggle.classList.toggle('open');
+        navLinks.classList.toggle('open');
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navToggle.classList.remove('open');
+            navLinks.classList.remove('open');
+        });
+        });
+
+    </script>
+</body>
+</html>

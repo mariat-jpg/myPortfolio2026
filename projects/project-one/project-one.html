@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project One | Portfolio</title>
+    <link rel="stylesheet" href="proj1_style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+    <img src="../../assets/deco/fl8.png" alt="" class="deco-f8 deco-fl8--body" data-initial-rotate="-12"/>
+    <img src="../../assets/deco/fl9.png" alt="" class="deco-f9 deco-fl9--body" data-initial-rotate="12" />
+    <img src="../../assets/deco/fl2.png" alt="" class="deco-f2 deco-f2--proj" data-initial-rotate="20"/>
+
+    <nav class="navbar">
+        <span class="nav-logo">maria.</span>
+
+        <button class="nav-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-links">
+        <li><a href="../../index.html#home">Home</a></li>
+        <li><a href="../../index.html#about">About Me</a></li>
+        <li><a href="../../index.html#projects">Projects</a></li>
+        <li><a href="../../index.html#skills">Skills</a></li>
+        <li><a href="../../index.html#contact">Contact Me</a></li>
+        <li class="nav-divider" role="presentation"></li>
+        <li><a href="https://github.com/mariat-jpg" target="_blank" aria-label="GitHub"><i class="devicon-github-plain"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/maria-e-thomas/" target="_blank" aria-label="LinkedIn"><i class="devicon-linkedin-plain"></i></a></li>
+        </ul>
+    </nav>
+
+    <section class="project-detail">
+
+        <h1 class="project-title">Predicting Stellar Luminosity Using Machine Learning On The Gaia DR3 Dataset</h1>
+
+        <div class="project-body">
+
+            <div class="project-outputs">
+            <img src="1.jpg" alt="Output 1" class="output-img" />
+            <img src="2.jpg" alt="Output 2" class="output-img" />
+            <img src="3.jpg" alt="Output 3" class="output-img" />
+            </div>
+
+            <div class="project-description">
+            <p>Applied machine learning to Gaia DR3 stellar data to probe the log-linear luminosity–temperature–radius relationship, 
+                validating data-driven predictions against the Stefan-Boltzmann Law.
+            </p>
+            </br>
+            <p>Stellar luminosity is a fundamental quantity in astrophysics, but directly measuring it for large numbers of stars requires 
+            extensive observational resources. This project investigates whether machine learning models can accurately predict 
+            stellar luminosity from two more readily available stellar parameters i.e, effective temperature and radius, and whether the 
+            predictions align with the theoretical relationship established by the Stefan-Boltzmann Law.</p>
+            </div>
+            </br>
+        </div>
+
+        <div class="project-content">
+
+            <div class="content-block">
+                <h2>Research Question</h2>
+                <p>The Stefan-Boltzmann Law predicts that stellar luminosity scales as L ∝ R²T⁴, a relationship that holds precisely 
+                    only for ideal blackbodies. This project asks: how well do data-driven models trained purely on observed Gaia parameters 
+                    recover this theoretical relationship?</p>
+            </div>
+
+            <div class="content-block">
+                <h2>Methodology</h2>
+                <p>Stellar parameters (T_eff, R, L) were drawn from the Gaia DR3 catalogue. A log-transformation was applied to all three 
+                    quantities, linearizing the Stefan-Boltzmann power-law and placing the analysis in the same mathematical space as the 
+                    theoretical prediction. Three regression models of increasing complexity (Linear Regression, Random Forest, and Gradient 
+                    Boosting) were trained on log(T_eff) and log(R) to predict log(L), allowing a direct assessment of how much predictive 
+                    power is already encoded in the simplest physically-motivated model. Predicted luminosities were cross-validated against 
+                    both the Gaia Flame pipeline luminosities and Stefan-Boltzmann theoretical values computed from first principles.</p>
+            </div>
+
+            <div class="content-block">
+                <h2>Key Findings</h2>
+                <p>
+                    <ul>
+                        <li>All models achieved R² > 0.945, confirming that temperature and radius together encode the dominant physics of stellar luminosity across the HR diagram.</li>
+                        <li>Linear Regression, the model most structurally similar to the Stefan-Boltzmann Law in log-space, performed comparably to the more complex ensemble methods (R² ~0.946, MAE ~0.123 dex), suggesting the relationship is genuinely log-linear over most of the stellar parameter space sampled by Gaia.</li>
+                        <li>The Stefan-Boltzmann comparison revealed systematic overestimation of luminosity at the high-luminosity end, consistent with known departures from ideal blackbody behavior in evolved stars (giants, supergiants), where atmospheric complexity, convection, and mass loss make the simple L ∝ R²T⁴ approximation less accurate.</li>
+                        <li>This deviation is astrophysically meaningful: it points to the limits of the blackbody assumption and reflects real physical processes not captured by effective temperature alone.</li>
+                    </ul>
+                </p>
+            </div>
+
+            <div class="content-block">
+                <h2>Tech stack</h2>
+                <div class="tech-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Pandas</span>
+                    <span class="tag">NumPy</span>
+                    <span class="tag">Scikit-learn</span>
+                    <span class="tag">Matplotlib</span>
+                </div>
+            </div>
+
+            <div class="content-block">
+            <h2>Links</h2>
+            <a href="https://github.com/mariat-jpg/predictingStellarLuminosity" class="project-link" target="_blank">View on GitHub →</a>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        const decoImages = document.querySelectorAll('.deco-f2, .deco-f8, .deco-f9');
+
+        window.addEventListener('scroll', () => {
+        requestAnimationFrame(() => {
+                    const scrolled = window.scrollY;
+                    decoImages.forEach((img, index) => {
+                        const direction = index % 2 === 0 ? 1 : -1;
+                        const initialRotate = parseFloat(img.dataset.initialRotate) || 0;
+                        const rotation = initialRotate + (scrolled * 0.04 * direction);
+                        img.style.transform = `rotate(${rotation}deg)`;
+                    });
+            });
+        });
+
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        navToggle.addEventListener('click', () => {
+        navToggle.classList.toggle('open');
+        navLinks.classList.toggle('open');
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navToggle.classList.remove('open');
+            navLinks.classList.remove('open');
+        });
+        });
+    </script>
+
+</body>
+</html>

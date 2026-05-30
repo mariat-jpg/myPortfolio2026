@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maria | Portfolio</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+    <img src="assets/deco/fl3.png" alt="" class="deco-f3 deco-fl3--body" data-initial-rotate="-30"/>
+    <img src="assets/deco/fl4.png" alt="" class="deco-f4 deco-fl4--body"/>
+    <img src="assets/deco/fl6.png" alt="" class="deco-f6 deco-fl6--body" data-initial-rotate="-12"/>
+    <img src="assets/deco/fl7.png" alt="" class="deco-f7 deco-fl7--body"/>
+    <img src="assets/deco/fl2.png" alt="" class="deco-f2 deco-fl2--body" data-initial-rotate="-20"/>
+
+    <nav class="navbar">
+        <span class="nav-logo">maria.</span>
+
+        <button class="nav-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+        <li class="nav-divider" role="presentation"></li>
+        <li><a href="https://github.com/mariat-jpg" target="_blank" aria-label="GitHub" style="font-size: 1.3rem;"><i class="devicon-github-plain" style="width: 150px;"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/maria-e-thomas/" target="_blank" aria-label="LinkedIn" style="font-size: 1.3rem;"><i class="devicon-linkedin-plain" style="width: 150px;"></i></a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="home">
+
+        <div class="hero-image-wrapper">
+            <img src="my_photo.jpeg" alt="my photo" class="hero-photo"/>
+            <div class="hero-image-bg"></div>
+            <img src="assets/deco/l2.png" alt="" class="deco-l2 deco-l2--hero"/>
+            <img src="assets/deco/l1.png" alt="" class="deco-l1 deco-l1--hero"/> 
+        </div>
+
+        <div class="hero-text">
+            <h1 class="hero-heading">
+                <span class="typewriter" id="typewriter"></span>
+            </h1>
+            <p class="hero-bio">
+                I'm a Computer Science and Engineering undergraduate with experience designing and building machine learning systems, 
+                data analysis pipelines, and AI-powered applications across complex, real-world datasets. I write clean, modular code with 
+                an emphasis on interpretability and sound methodology, and I am comfortable working across the full ML workflow, from data 
+                preprocessing and feature engineering to model evaluation and visualization. I am currently seeking software engineering 
+                and ML engineering roles where I can build practical, high-impact systems.
+            </p>
+            <a href="#projects" class="hero-cta">See my work</a>
+        </div>
+
+    </section>
+
+    <section class="section" id="about">
+        <div class="about-content">
+            <h2 class="title">About Me</h2>
+            <p style="margin-top: 0.5rem;">
+                I'm a computer science and engineering undergraduate who builds things that work with data at their core. I approach engineering 
+                problems methodically, with a focus on what the system is actually doing and why. Whether I'm designing a data pipeline, training a model, or 
+                debugging something that shouldn't be broken, I tend to think in terms of underlying structure rather than surface-level fixes.
+            </p>
+            <p>
+                I'm currently in my final year at Rajagiri School of Engineering and Technology, Kochi, India, where I've built projects ranging from machine 
+                learning pipelines on large datasets to building analysis tools. These have given me hands-on experience with the full arc of a technical project, 
+                from raw messy data to a result you can stand behind and explain clearly. I'm now looking for a software engineering role where I can contribute to a 
+                team building something meaningful, while continuing to grow as an engineer. I'm particularly interested in roles involving data-intensive systems, 
+                scientific computing, or machine learning infrastructure.
+            </p> 
+            <p>
+                My longer-term interests lean toward research and the space sector, which means I care about writing code that's not just functional but correct and 
+                well-reasoned. Outside of work, I'm an avid reader and a film enthusiast. I particularly enjoy
+                having long conversations about both and am always down to swap recommendations. I also dabble in art and love to paint and draw when I have the time.
+            </p>
+            <p>
+                My full resume is available below with more details on my technical experience and academic background.
+            </p>
+            <a href="assets/MariaElshaThomas.pdf" class="hero-cta" download="Resume_Maria Elsha Thomas" target="_blank">Download my resume</a>
+        </div>
+    </section>
+
+    <section class="section" id="projects">
+    
+        <div class="projects-header">
+        <h2 class="title">My Work</h2>
+        <p class="subtitle">Click any card to read more about my projects.</p>
+        </div>
+    
+        <div class="projects-row">
+    
+            <a class="project-card" href="projects/project-one/project-one.html" data-name="Project One">
+                <img src="assets/projects/project-one.jfif" alt="Project One screenshot" class="card-img" />
+                <div class="card-overlay">
+                <span class="card-tag">Python · ML · Physics</span>
+                <h3 class="card-name">Predicting Stellar Luminosity</h3>
+                <p class="card-blurb">Compared the predicted stellar luminosity with actual measurements and those from the Stefan-Boltzmann Law.</p>
+                <span class="card-cta">View project →</span>
+                </div>
+            </a>
+            
+            <a class="project-card" href="projects/project-two/project-two.html" data-name="Project Two">
+                <img src="assets/projects/project-two.jfif" alt="Project Two screenshot" class="card-img" />
+                <div class="card-overlay">
+                <span class="card-tag">Python · fMRI</span>
+                <h3 class="card-name">Nonlinear Dynamics in Neural Networks</h3>
+                <p class="card-blurb">An analysis tool to model the dynamic connectivity of neural networks.</p>
+                <span class="card-cta">View project →</span>
+                </div>
+            </a>
+
+            <a class="project-card" href="projects/project-three/project-three.html" data-name="Project Three">
+                <img src="assets/projects/project-three.jpg" alt="Project Three screenshot" class="card-img" />
+                <div class="card-overlay">
+                <span class="card-tag">TypeScript · React · LLM · API</span>
+                <h3 class="card-name">StyleMe - AI Powered Outfit Recommendation Web App</h3>
+                <p class="card-blurb">A web application that recommends outfits based on user preferences and occasion.</p>
+                <span class="card-cta">View project →</span>
+                </div>
+            </a>
+
+            <a class="project-card" href="projects/project-four/project-four.html" data-name="Project Four">
+                <img src="assets/projects/project-four.jpg" alt="Project Four screenshot" class="card-img" />
+                <div class="card-overlay">
+                <span class="card-tag">ASP.NET Core MVC · C# · SQL Server · ADO.NET</span>
+                <h3 class="card-name">Employee Management System - ASP.NET MVC Web Application</h3>
+                <p class="card-blurb">A full-stack employee management web application with complete CRUD functionality to manage employee information.</p>
+                <span class="card-cta">View project →</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="section" id="skills">
+        <h2 class="title">Skills</h2>
+        <div class="skills-category">
+            <h3 class="skills-category-title">Programming Languages</h3>
+            <div class="skills-tiles">
+                <div class="skill-tile">
+                    <i class="devicon-python-plain"></i>
+                    <span>Python</span>
+                </div>
+                <div class="skill-tile">
+                    <i class="devicon-c-plain"></i>
+                    <span>C</span>
+                </div>
+                <div class="skill-tile">
+                    <i class="devicon-csharp-plain"></i>
+                    <span>C#</span>
+                </div>
+                <div class="skill-tile">
+                    <i class="devicon-java-plain"></i>
+                    <span>Java</span>
+                </div>
+                <div class="skill-tile">
+                    <i class="devicon-javascript-plain"></i>
+                    <span>JavaScript</span>
+                </div>
+                <div class="skill-tile">
+                    <i class="devicon-html5-plain"></i>
+                    <span>HTML</span>
+                </div>
+                <div class="skill-tile">
+                    <i class="devicon-css3-plain"></i>
+                    <span>CSS</span>
+                </div>
+                <div class="skill-tile">
+                    <i class="devicon-mysql-plain"></i>
+                    <span>SQL</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="skills-category">
+            <h3 class="skills-category-title">Libraries</h3>
+            <div class="skills-tiles">
+                <div class="skill-tile">
+                    <i class="devicon-numpy-plain"></i>
+                    <span>NumPy</span>
+                </div>
+                <div class="skill-tile">
+                    <i class="devicon-pandas-plain"></i>
+                    <span>Pandas</span>
+                </div>
+                <div class="skill-tile">
+                    <i class="devicon-matplotlib-plain"></i>
+                    <span>Matplotlib</span>
+                </div>
+                <div class="skill-tile">
+                    <i class="devicon-scikitlearn-plain"></i>
+                    <span>Scikit-learn</span>
+                </div>
+                <div class="skill-tile">
+                    <span style="font-size: 0.8rem; font-weight: 600;">Seaborn</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="skills-category">
+            <h3 class="skills-category-title">Tools</h3>
+            <div class="skills-tiles">
+                <div class="skill-tile">
+                    <i class="devicon-git-plain"></i>
+                    <span>Git</span>
+                </div>
+                <div class="skill-tile">
+                    <i class="devicon-github-plain"></i>
+                    <span>GitHub</span>
+                </div>
+                <div class="skill-tile">
+                    <i class="devicon-vscode-plain"></i>
+                    <span>VS Code</span>
+                </div>
+                <div class="skill-tile">
+                    <i class="devicon-vscode-plain"></i>
+                    <span>Visual Studio</span>
+                </div>
+                <div class="skill-tile">
+                    <i class="devicon-googlecolab-plain"></i>
+                    <span>Google Colab</span>
+                </div>
+                <div class="skill-tile">
+                    <i class="devicon-latex-plain"></i>
+                    <span>LaTeX</span>
+                </div>
+                <div class="skill-tile">
+                    <i class="devicon-figma-plain"></i>
+                    <span>Figma</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        
+            <h2 class="title">Contact Me</h2>
+            <div class="contact-section">
+                <div class="contact-left">
+                    <p class="subtitle">Let's connect!</p>
+                    <p>I'm currently open to SWE roles and internships and would love to chat if you think I might be a 
+                        good fit for your team.
+                    </p>
+                    <p style="gap: 2rem; display: flex; align-items: center;"><i class="fa-solid fa-circle"></i>Open to opportunities</p>
+                    <div class="location-block">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div class="location-text">
+                            <span>Based in Kochi, Kerala, India.</span>
+                            <span>Willing to relocate or work remotely.</span>
+                        </div>
+                    </div>
+                    <p>You can find me at:</p>
+                    <div class="contact-icons">
+                        <a href="https://github.com/mariat-jpg" target="_blank"><i class="devicon-github-plain"></i></a>
+                        <a href="https://www.linkedin.com/in/maria-e-thomas/" target="_blank"><i class="devicon-linkedin-plain"></i></a>
+                        <a href="mailto:mariaelshathomas@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                    </div>  
+                </div>
+
+                <div class="contact-divider" role="presentation"></div>
+
+                <div class="contact-right">
+                    <p class="subtitle">Leave me a message, and i'll get back to you as soon as i can!</p>
+                    <div class="contact-form">
+                        <input 
+                            type="email"
+                            id="user-email"
+                            class="form-input"
+                            placeholder="Your email address"
+                        />
+                        <textarea 
+                            id="user-message"
+                            class="form-textarea"
+                            placeholder="Your message"
+                        ></textarea>
+                        <button class="form-btn" onclick="sendMail()">Send</button>
+                    </div>
+                </div>
+                
+            </div>
+    </section>
+
+    <script>
+        const target = document.getElementById('typewriter');
+        const text = 'Hi there, I\'m Maria!';
+        const speed = 110;  
+        const pause = 1800;  
+        let i = 0;
+        let deleting = false;
+
+        function type()
+        {
+            if (!deleting)
+            {
+                target.textContent = text.slice(0, i + 1);
+                i++;
+                if (i === text.length) 
+                {
+                    setTimeout(() => { deleting = true; type(); }, pause);
+                    return;
+                }
+            } 
+            else 
+            {
+                target.textContent = text.slice(0, i - 1);
+                i--;
+                if (i === 0) 
+                {
+                    deleting = false;
+                }
+            }
+            setTimeout(type, deleting ? speed / 2 : speed);
+        }
+        type();
+
+
+        const decoImages = document.querySelectorAll('.deco-f2, .deco-f3, .deco-f6');
+
+        window.addEventListener('scroll', () => {
+        requestAnimationFrame(() => {
+                    const scrolled = window.scrollY;
+                    decoImages.forEach((img, index) => {
+                        const direction = index % 2 === 0 ? 1 : -1;
+                        const initialRotate = parseFloat(img.dataset.initialRotate) || 0;
+                        const rotation = initialRotate + (scrolled * 0.04 * direction);
+                        img.style.transform = `rotate(${rotation}deg)`;
+                    });
+            });
+        });
+    </script>
+
+    <script>
+        function sendMail() {
+            const email = document.getElementById('user-email').value.trim();
+            const message = document.getElementById('user-message').value.trim();
+
+            // basic validation, don't open mail if fields are empty
+            if (!email || !message) {
+                alert('Please fill in both your email and your message before sending.');
+                return;   // stops the function here if either field is empty
+            }
+
+            const mailto = `mailto:mariaelshathomas@gmail.com`
+                + `?subject=Portfolio message from ${email}`
+                + `&body=${encodeURIComponent(message)}`;
+
+            window.location.href = mailto;
+        }
+
+        //hamburger menu
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        navToggle.addEventListener('click', () => {
+        navToggle.classList.toggle('open');
+        navLinks.classList.toggle('open');
+        });
+
+        //close menu when a link is clicked
+        navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navToggle.classList.remove('open');
+            navLinks.classList.remove('open');
+        });
+        });
+
+    </script>
+
+    </body>
+</html>
