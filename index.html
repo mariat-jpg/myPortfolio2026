@@ -355,6 +355,12 @@
                 + `&body=${encodeURIComponent(message)}`;
 
             window.location.href = mailto;
+
+            //clear message box after sending
+            setTimeout(() => {
+                document.getElementById('user-email').reset();
+                document.getElementById('user-message').reset();
+            }, 1000);
         }
 
         //hamburger menu
