@@ -358,8 +358,8 @@
 
             //clear message box after sending
             setTimeout(() => {
-                document.getElementById('user-email').reset();
-                document.getElementById('user-message').reset();
+                document.getElementById('user-email').value = '';
+                document.getElementById('user-message').value = '';
             }, 1000);
         }
 
